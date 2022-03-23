@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600&display=swap");
+
+/* ----------------------------- */
+/* Custom Properties             */
+/* ----------------------------- */
+:root {
+  /* font-family */
+  --ff-heading: "Poppins", sans-serif;
+  --ff-body: "Open Sans", sans-serif;
+
+  /* colors */
+  --pink: hsl(322, 100%, 66%);
+  --very-pale-blue: hsl(207, 100%, 98%);
+  --very-dark-cyan: hsl(192, 100%, 9%);
+  --light-pink: hsl(321, 100%, 78%);
+  --light-red: hsl(0, 100%, 63%);
+
+  /* font-sizes */
+  --h1: 1.5rem;
+  --h2: 1.25rem;
+  --h2-nr: 3.75rem;
+  --h2-cta: 1.5rem;
+  --body-lg: 0.875rem;
+  --body-nr: 1rem;
+  --body: 0.875rem;
+  --footer-heading: 1.25rem;
+  --footer: 0.875rem;
+}
+
+@media (min-width: 820px) {
+  :root {
+    /* font-sizes */
+    --h1: 3rem;
+    --h2: 2.375rem;
+    --h2-nr: 6rem;
+    --h2-cta: 2.5rem;
+    --body-lg: 1.25rem;
+    --body-nr: 1.5rem;
+    --body: 1rem;
+    --footer-heading: 1.5rem;
+  }
+}
+
+/* ----------------------------- */
+/* Reset                         */
+/* ----------------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset Margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Body */
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--body);
+  color: var(--grayish-blue);
+  /* min-height: 100vh;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: min-content 1fr; */
+}
+
+/* Images */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Forms */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Animation */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ----------------------------- */
+/* Utility Classes               */
+/* ----------------------------- */
+.container {
+  margin-inline: auto;
+  max-width: 1280;
+  width: 92%;
+}
+.d-flex {
+  display: flex;
+}
+.pos-a {
+  position: absolute;
+}
+.pos-r {
+  position: relative;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.skip-to-content {
+  background: var(--very-pale-cyan);
+  color: var(--very-dark-cyan);
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  transform: translateY(-120%);
+  transition: transform 500ms ease-in;
+  position: absolute;
+  z-index: 1000;
+}
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
+/* colors */
+.bg-white {
+  background-color: #fff;
+}
+.bg-pink {
+  background-color: var(--pink);
+}
+.bg-very-pale-blue {
+  background-color: var(--very-pale-blue);
+}
+.bg-very-dark-cyan {
+  background-color: var(--very-dark-cyan);
+}
+
+.text-very-dark-cyan {
+  color: var(--very-dark-cyan);
+}
+.text-white {
+  color: #fff;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* typography */
+
+.uppercase {
+  text-transform: uppercase;
+}
+.ff-poppins {
+  font-family: var(--ff-heading);
+}
+.ff-open-sans {
+  font-family: var(--ff-body);
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.lh-150 {
+  line-height: 150%;
+}
+.lh-171 {
+  line-height: 171%;
+}
+.h1 {
+  font-size: var(--h1);
+}
+.h2 {
+  font-size: var(--h2);
+}
+.h2-cta {
+  font-size: var(--h2-cta);
+}
+.h2-nr {
+  font-size: var(--h2-nr);
+}
+.body {
+  font-size: var(--body);
+}
+.body-lg {
+  font-size: var(--body-lg);
+}
+.body-nr {
+  font-size: var(--body-nr);
+}
+.footer {
+  font-size: var(--footer);
+}
+.footer-heading {
+  font-size: var(--footer-heading);
+}
+.text-center {
+  text-align: center;
+}
+
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Hero                         */
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* BTN                         */
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Feat                         */
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Cta                           */
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Footer                         */
+/* ----------------------------- */

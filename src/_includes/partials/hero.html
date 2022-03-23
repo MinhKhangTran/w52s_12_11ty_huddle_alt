@@ -1,3 +1,10 @@
 <section id="hero" aria-label="hero section">
-  <h1>Hero</h1>
+  <h1 class="[ hero__title ] [ h1 text-very-dark-cyan ff-poppins fw-600 ]">
+    {{hero.title}}
+  </h1>
+  <p class="[ hero__subtitle ][ body-lg text-very-dark-cyan ff-open-sans ]">
+    {{hero.text}}
+  </p>
+  <button class="btn">{{hero.cta}}</button>
+  <img src="./images/{{hero.image}}.svg" alt="{{hero.image}}" />
 </section>

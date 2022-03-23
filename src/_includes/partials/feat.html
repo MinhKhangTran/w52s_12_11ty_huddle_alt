@@ -1,3 +1,9 @@
 <section id="feat" aria-label="feat section">
-  <h2>Feat</h2>
+  {% for item in feat %}
+  <div class="[ feat__card--{{feat.id}} ]">
+    <h2>{{item.title}}</h2>
+    <p>{{item.text}}</p>
+    <img src="./images/illustration-{{item.image}}.svg" alt="{{item.title}}" />
+  </div>
+  {% endfor %}
 </section>

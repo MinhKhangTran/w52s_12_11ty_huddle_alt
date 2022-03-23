@@ -1,3 +1,7 @@
 <section id="about" aria-label="about section">
-  <h2>About</h2>
+  {% for item in about %}
+  <img src="./images/icon-{{item.icon}}.svg" alt="{{item.text}}" />
+  <h2>{{item.nr}}</h2>
+  <p>{{item.text}}</p>
+  {% endfor %}
 </section>
