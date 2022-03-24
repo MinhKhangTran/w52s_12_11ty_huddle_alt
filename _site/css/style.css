@@ -25,6 +25,9 @@
   --body: 0.875rem;
   --footer-heading: 1.25rem;
   --footer: 0.875rem;
+
+  /* transition */
+  --transition: all 0.35s ease-in;
 }
 
 @media (min-width: 820px) {
@@ -255,7 +258,19 @@ ul {
 /* ----------------------------- */
 /* Navigation                    */
 /* ----------------------------- */
-
+header {
+  --header-top: 1.5rem;
+  padding-top: var(--header-top);
+}
+.navigation {
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 820px) {
+  header {
+    --header-top: 4.875rem;
+  }
+}
 /* ----------------------------- */
 /* Hero                         */
 /* ----------------------------- */
@@ -263,7 +278,32 @@ ul {
 /* ----------------------------- */
 /* BTN                         */
 /* ----------------------------- */
-
+button[data-type="naked"] {
+  --button-pi: 1.03125rem;
+  --button-pb: 0.28125rem;
+  --button-fs: 0.625rem;
+  background-color: transparent;
+  border: 1px solid var(--pink);
+  color: var(--pink);
+  letter-spacing: -0.02em;
+  border-radius: 90px;
+  cursor: pointer;
+  padding-block: var(--button-pb);
+  padding-inline: var(--button-pi);
+  font-size: var(--button-fs);
+  transition: var(--transition);
+}
+button[data-type="naked"]:hover {
+  border: 1px solid var(--light-pink);
+  color: var(--light-pink);
+}
+@media (min-width: 820px) {
+  button[data-type="naked"] {
+    --button-pb: 0.5625rem;
+    --button-pi: 1.875rem;
+    --button-fs: 1rem;
+  }
+}
 /* ----------------------------- */
 /* Feat                         */
 /* ----------------------------- */

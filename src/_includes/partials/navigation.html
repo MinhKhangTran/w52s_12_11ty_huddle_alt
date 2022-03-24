@@ -1,8 +1,15 @@
 <header role="banner">
-  <nav aria-labelledby="primary-navigation">
+  <nav class="container" aria-labelledby="primary-navigation">
     <span class="sr-only" id="primary-navigation">Primary navigation</span>
-    <ul>
-      <li></li>
+    <ul class="[ navigation ] [ d-flex ]">
+      <li>
+        <a href="/">
+          <img src="{{nav.logo}}" alt="home" />
+        </a>
+      </li>
+      <li>
+        <button class="fw-600" data-type="naked">{{nav.cta}}</button>
+      </li>
     </ul>
   </nav>
 </header>
