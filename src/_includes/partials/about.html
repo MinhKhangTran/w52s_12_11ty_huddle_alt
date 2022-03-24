@@ -1,7 +1,13 @@
-<section id="about" aria-label="about section">
+<section class="container d-flex" id="about" aria-label="about section">
   {% for item in about %}
-  <img src="./images/icon-{{item.icon}}.svg" alt="{{item.text}}" />
-  <h2>{{item.nr}}</h2>
-  <p>{{item.text}}</p>
+  <article class="[ about__wrapper ][ ]">
+    <img src="./images/icon-{{item.icon}}.svg" alt="{{item.text}}" />
+    <h2
+      class="[ about__title--{{item.id}} ][ text-very-dark-cyan fw-700 ff-open-sans ]"
+    >
+      {{item.nr}}
+    </h2>
+    <p class="[ about__subtitle ][ ff-open-sans ]">{{item.text}}</p>
+  </article>
   {% endfor %}
 </section>
