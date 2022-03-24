@@ -1,10 +1,18 @@
-<section id="hero" aria-label="hero section">
-  <h1 class="[ hero__title ] [ h1 text-very-dark-cyan ff-poppins fw-600 ]">
+<section class="" id="hero" aria-label="hero section">
+  <h1
+    class="[ hero__title ][ h1 text-very-dark-cyan ff-poppins fw-600 text-center ]"
+  >
     {{hero.title}}
   </h1>
-  <p class="[ hero__subtitle ][ body-lg text-very-dark-cyan ff-open-sans ]">
+  <p
+    class="[ hero__subtitle ][ body-lg text-very-dark-cyan ff-open-sans text-center ]"
+  >
     {{hero.text}}
   </p>
-  <button class="btn">{{hero.cta}}</button>
-  <img src="./images/{{hero.image}}.svg" alt="{{hero.image}}" />
+  <div class="[ hero__button--wrapper ][ d-flex ]">
+    <button data-type="primary curved" class="fw-700">{{hero.cta}}</button>
+  </div>
+  <div class="[ hero__img--wrapper ][ d-flex ]">
+    <img src="./images/{{hero.image}}.svg" alt="{{hero.image}}" />
+  </div>
 </section>

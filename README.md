@@ -94,3 +94,5 @@ This challenge is completely free. Please share it with anyone who will find it 
 CUBE Css
 
 global datas in index.html
+
+safari no inline and block properties => autoprefixer??
