@@ -1,9 +1,90 @@
 <section id="feat" aria-label="feat section">
   {% for item in feat %}
-  <div class="[ feat__card--{{feat.id}} ]">
+  <div class="[ feat__card--{{item.id}} ]">
     <h2>{{item.title}}</h2>
     <p>{{item.text}}</p>
     <img src="./images/illustration-{{item.image}}.svg" alt="{{item.title}}" />
+    {% if item.id === "1" %}
+    <picture class="feat__image--top">
+      <source
+        media="(min-width: 375px)"
+        srcset="./images/bg-section-top-desktop-1.svg"
+      />
+      <source
+        media="(max-width: 375px)"
+        srcset="./images/bg-section-top-mobile-1.svg"
+      />
+      <img
+        srcset="
+          ./images/bg-section-top-desktop-1.svg,
+          ./images/bg-section-top-mobile-1.svg
+        "
+        sizes="(min-width: 375px), (max-width: 375px)"
+        src="./images/bg-section-top-mobile-1.svg"
+        alt=""
+      />
+    </picture>
+
+    <picture class="feat__image--bottom">
+      <source
+        media="(min-width: 375px)"
+        srcset="./images/bg-section-bottom-desktop-1.svg"
+      />
+      <source
+        media="(max-width: 375px)"
+        srcset="./images/bg-section-bottom-mobile-1.svg"
+      />
+      <img
+        srcset="
+          ./images/bg-section-bottom-desktop-1.svg,
+          ./images/bg-section-bottom-mobile-1.svg
+        "
+        sizes="(min-width: 375px), (max-width: 375px)"
+        src="./images/bg-section-bottom-mobile-1.svg"
+        alt=""
+      />
+    </picture>
+    {% endif %} {% if item.id === "3" %}
+    <picture class="feat__image--top">
+      <source
+        media="(min-width: 375px)"
+        srcset="./images/bg-section-top-desktop-2.svg"
+      />
+      <source
+        media="(max-width: 375px)"
+        srcset="./images/bg-section-top-mobile-2.svg"
+      />
+      <img
+        srcset="
+          ./images/bg-section-top-desktop-2.svg,
+          ./images/bg-section-top-mobile-2.svg
+        "
+        sizes="(min-width: 375px), (max-width: 375px)"
+        src="./images/bg-section-top-mobile-2.svg"
+        alt=""
+      />
+    </picture>
+
+    <picture class="feat__image--bottom">
+      <source
+        media="(min-width: 375px)"
+        srcset="./images/bg-section-bottom-desktop-2.svg"
+      />
+      <source
+        media="(max-width: 375px)"
+        srcset="./images/bg-section-bottom-mobile-2.svg"
+      />
+      <img
+        srcset="
+          ./images/bg-section-bottom-desktop-2.svg,
+          ./images/bg-section-bottom-mobile-2.svg
+        "
+        sizes="(min-width: 375px), (max-width: 375px)"
+        src="./images/bg-section-bottom-mobile-2.svg"
+        alt=""
+      />
+    </picture>
+    {% endif %}
   </div>
   {% endfor %}
 </section>

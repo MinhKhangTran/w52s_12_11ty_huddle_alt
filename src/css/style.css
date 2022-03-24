@@ -451,7 +451,36 @@ button[data-type="primary curved"]:hover {
 /* ----------------------------- */
 /* Feat                         */
 /* ----------------------------- */
+#feat {
+  --pt: 1.5rem;
+  padding-top: var(--pt);
+}
+.feat__card--1,
+.feat__card--3 {
+  position: relative;
+}
 
+.feat__image--top img,
+.feat__image--bottom img {
+  position: absolute;
+}
+.feat__image--top img {
+  top: 0;
+  transform: translateY(-100%);
+}
+.feat__image--bottom img {
+  bottom: 0;
+  transform: translateY(100%);
+}
+@media (min-width: 820px) {
+  #feat {
+    --pt: 8.5625rem;
+  }
+  .feat__image--top img,
+  .feat__image--bottom img {
+    width: 100%;
+  }
+}
 /* ----------------------------- */
 /* Cta                           */
 /* ----------------------------- */
