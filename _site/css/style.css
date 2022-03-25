@@ -592,7 +592,27 @@ button[data-type="primary curved"]:hover {
 /* ----------------------------- */
 /* Cta                           */
 /* ----------------------------- */
+#cta {
+  --pt: 10.5rem;
+  --gap: 2.3125rem;
+  display: flex;
+  gap: var(--gap);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--pt);
+  width: 240px;
+  margin: 0 auto;
+}
+@media (min-width: 820px) {
+  #cta {
+    --pt: 19rem;
+    --gap: 2.4375rem;
 
+    width: 680px;
+    margin: 0 auto;
+  }
+}
 /* ----------------------------- */
 /* Footer                         */
 /* ----------------------------- */
