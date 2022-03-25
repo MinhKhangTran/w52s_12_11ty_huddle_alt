@@ -1,21 +1,28 @@
-<footer>
+<footer class="bg-very-dark-cyan">
   <a href="/">
     <img src="{{footer.logo}}" alt="home" />
   </a>
   <p>{{footer.text}}</p>
-  <address class="">
+  <address class="text-white">
     <div>
       {% for item in footer.info %}
-      <p><span>{{item.icon}}</span>{{item.text}}</p>
+      <p>
+        <span>
+          <img
+            src="./images/icon-{{item.icon}}.svg"
+            alt=""
+            aria-hidden="true"
+          /> </span
+        >{{item.text}}
+      </p>
       {% endfor %}
     </div>
   </address>
-  <div class="socials">
-    {% for social in footer.socials %}
-    <p>{{social.icon}}</p>
-    {% endfor %}
+  <div class="[ socials ][ text-white ]">
+    {% for social in footer.socials %} {% ext social.icon, social.url %} {%
+    endfor %}
   </div>
-  <div class="newsletter">
+  <div class="[ newsletter ][ text-white ]">
     <p>{{footer.newsletter.title}}</p>
     <p>{{footer.newsletter.text}}</p>
     <button>{{footer.newsletter.cta}}</button>
