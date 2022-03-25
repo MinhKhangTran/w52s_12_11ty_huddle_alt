@@ -223,37 +223,38 @@
 
 </main>
     <footer class="bg-very-dark-cyan">
-  <a href="/">
-    <img src="/images/logo_alt.svg" alt="home" />
-  </a>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.</p>
-  <address class="text-white">
-    <div>
-      
-      <p>
-        <span>
-          <img
-            src="./images/icon-phone.svg"
-            alt=""
-            aria-hidden="true"
-          /> </span
-        >Phone: +1-543-123-4567
-      </p>
-      
-      <p>
-        <span>
-          <img
-            src="./images/icon-email.svg"
-            alt=""
-            aria-hidden="true"
-          /> </span
-        >example@huddle.com
-      </p>
-      
-    </div>
-  </address>
-  <div class="[ socials ][ text-white ]">
-     <a class="footer__social" href="https://www.facebook.com" title="https://www.facebook.com" target="_blank" rel="noopener">
+  <div class="footer__wrapper">
+    <a href="/">
+      <img src="/images/logo_alt.svg" alt="home" />
+    </a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.</p>
+    <address class="text-white">
+      <div>
+        
+        <p>
+          <span>
+            <img
+              src="./images/icon-phone.svg"
+              alt=""
+              aria-hidden="true"
+            /> </span
+          >Phone: +1-543-123-4567
+        </p>
+        
+        <p>
+          <span>
+            <img
+              src="./images/icon-email.svg"
+              alt=""
+              aria-hidden="true"
+            /> </span
+          >example@huddle.com
+        </p>
+        
+      </div>
+    </address>
+    <div class="[ socials ][ text-white ]">
+       <a class="footer__social" href="https://www.facebook.com" title="https://www.facebook.com" target="_blank" rel="noopener">
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M29.5312 2.53125H6.46875C5.42446 2.53125 4.42294 2.94609 3.68452 3.68452C2.94609 4.42294 2.53125 5.42446 2.53125 6.46875V29.5312C2.53125 30.5755 2.94609 31.5771 3.68452 32.3155C4.42294 33.0539 5.42446 33.4688 6.46875 33.4688H17.7659V20.5962H15.1914V15.4472H17.7446V13.1203C17.7446 11.0143 18.7478 7.72411 23.1628 7.72411L27.14 7.74007V12.1515H24.2517C23.7821 12.1515 23.1138 12.3854 23.1138 13.3885V15.4476H27.2057L26.736 20.5966H22.9148V33.4688H29.5312C30.0483 33.4688 30.5603 33.3669 31.0381 33.169C31.5158 32.9711 31.9499 32.6811 32.3155 32.3155C32.6811 31.9499 32.9711 31.5158 33.169 31.0381C33.3669 30.5603 33.4688 30.0483 33.4688 29.5312V6.46875C33.4688 5.95167 33.3669 5.43965 33.169 4.96193C32.9711 4.48421 32.6811 4.05015 32.3155 3.68452C31.9499 3.31889 31.5158 3.02885 31.0381 2.83097C30.5603 2.6331 30.0483 2.53125 29.5312 2.53125V2.53125Z" fill="white"/>
                   </svg>
@@ -268,12 +269,33 @@
                   <path d="M28.0788 4.66064C26.4748 4.66064 25.1702 5.96554 25.1702 7.56927C25.1702 9.17327 26.4748 10.4782 28.0788 10.4782C29.6828 10.4782 30.9877 9.17327 30.9877 7.56927C30.9877 5.96527 29.6828 4.66064 28.0788 4.66064ZM28.0788 8.36742C27.6388 8.36742 27.2806 8.00927 27.2806 7.56927C27.2806 7.12899 27.6388 6.77111 28.0788 6.77111C28.5191 6.77111 28.8772 7.12899 28.8772 7.56927C28.8772 8.00927 28.5191 8.36742 28.0788 8.36742Z" fill="white"/>
                   </svg>
                 </a> 
+    </div>
+    <div class="[ newsletter ][ text-white ]">
+      <p>Newsletter</p>
+      <p>To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address</p>
+      <input type="text" />
+      <button>Subscribe</button>
+    </div>
   </div>
-  <div class="[ newsletter ][ text-white ]">
-    <p>Newsletter</p>
-    <p>To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address</p>
-    <button>Subscribe</button>
-  </div>
+  <picture class="footer__bg">
+    <source
+      media="(min-width: 375px)"
+      srcset="./images/bg-footer-top-desktop.svg"
+    />
+    <source
+      media="(max-width: 375px)"
+      srcset="./images/bg-footer-top-mobile.svg"
+    />
+    <img
+      srcset="
+        ./images/bg-footer-top-desktop.svg,
+        ./images/bg-footer-top-mobile.svg
+      "
+      sizes="(min-width: 375px), (max-width: 375px)"
+      src="./images/bg-footer-top-mobile.svg"
+      alt=""
+    />
+  </picture>
 </footer>
 
   </body>

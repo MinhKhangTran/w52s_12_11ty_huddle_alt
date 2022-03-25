@@ -616,3 +616,47 @@ button[data-type="primary curved"]:hover {
 /* ----------------------------- */
 /* Footer                         */
 /* ----------------------------- */
+footer {
+  --mt: 19.0625rem;
+  position: relative;
+  margin-top: var(--mt);
+}
+.footer__bg img {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  transform: translateY(-97.5%);
+}
+.socials a {
+  text-decoration: none;
+}
+.footer__wrapper {
+  --pi: 1.75rem;
+  --pt: 3.3125rem;
+  --pb: 2.8125rem;
+  padding-left: var(--pi);
+  padding-right: var(--pi);
+  padding-top: var(--pt);
+  padding-bottom: var(--pb);
+}
+@media (min-width: 820px) {
+  footer {
+    --mt: 21.125rem;
+    position: relative;
+    margin-top: var(--mt);
+  }
+  .footer__bg img {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    transform: translateY(-97.5%);
+  }
+  .socials a {
+    text-decoration: none;
+  }
+  .footer__wrapper {
+    --pi: 7.5rem;
+    --pt: 7.5rem;
+    --pb: 6.5rem;
+  }
+}

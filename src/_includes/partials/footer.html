@@ -1,30 +1,52 @@
 <footer class="bg-very-dark-cyan">
-  <a href="/">
-    <img src="{{footer.logo}}" alt="home" />
-  </a>
-  <p>{{footer.text}}</p>
-  <address class="text-white">
-    <div>
-      {% for item in footer.info %}
-      <p>
-        <span>
-          <img
-            src="./images/icon-{{item.icon}}.svg"
-            alt=""
-            aria-hidden="true"
-          /> </span
-        >{{item.text}}
-      </p>
-      {% endfor %}
+  <div class="footer__wrapper">
+    <a href="/">
+      <img src="{{footer.logo}}" alt="home" />
+    </a>
+    <p>{{footer.text}}</p>
+    <address class="text-white">
+      <div>
+        {% for item in footer.info %}
+        <p>
+          <span>
+            <img
+              src="./images/icon-{{item.icon}}.svg"
+              alt=""
+              aria-hidden="true"
+            /> </span
+          >{{item.text}}
+        </p>
+        {% endfor %}
+      </div>
+    </address>
+    <div class="[ socials ][ text-white ]">
+      {% for social in footer.socials %} {% ext social.icon, social.url %} {%
+      endfor %}
     </div>
-  </address>
-  <div class="[ socials ][ text-white ]">
-    {% for social in footer.socials %} {% ext social.icon, social.url %} {%
-    endfor %}
+    <div class="[ newsletter ][ text-white ]">
+      <p>{{footer.newsletter.title}}</p>
+      <p>{{footer.newsletter.text}}</p>
+      <input type="text" />
+      <button>{{footer.newsletter.cta}}</button>
+    </div>
   </div>
-  <div class="[ newsletter ][ text-white ]">
-    <p>{{footer.newsletter.title}}</p>
-    <p>{{footer.newsletter.text}}</p>
-    <button>{{footer.newsletter.cta}}</button>
-  </div>
+  <picture class="footer__bg">
+    <source
+      media="(min-width: 375px)"
+      srcset="./images/bg-footer-top-desktop.svg"
+    />
+    <source
+      media="(max-width: 375px)"
+      srcset="./images/bg-footer-top-mobile.svg"
+    />
+    <img
+      srcset="
+        ./images/bg-footer-top-desktop.svg,
+        ./images/bg-footer-top-mobile.svg
+      "
+      sizes="(min-width: 375px), (max-width: 375px)"
+      src="./images/bg-footer-top-mobile.svg"
+      alt=""
+    />
+  </picture>
 </footer>
