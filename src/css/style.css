@@ -726,7 +726,7 @@ footer {
   text-decoration: none;
 }
 
-@media (min-width: 820px) {
+@media (min-width: 1025px) {
   footer {
     --mt: 21.125rem;
     position: relative;
@@ -745,5 +745,76 @@ footer {
     --pi: 7.5rem;
     --pt: 7.5rem;
     --pb: 6.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    grid-template-areas:
+      "header newsletter"
+      "address newsletter"
+      "socials .";
+  }
+  .footer__newsletter {
+    margin-left: auto;
+  }
+  .footer__newsletter h2 {
+    font-size: 1.5rem;
+  }
+  .footer__newsletter p {
+    line-height: 171%;
+    font-size: 0.875rem;
+    padding-top: 0.875rem;
+  }
+  .footer__newsletter--form {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 2.375rem;
+  }
+  .footer__newsletter input {
+    width: 320px;
+    border-radius: 4px;
+    height: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .footer__newsletter p {
+    width: 350px;
+  }
+  .footer__button--wrapper {
+    padding-right: 2.5rem;
+  }
+  .footer__header {
+    padding-top: 0rem;
+    padding-left: 2.5rem;
+  }
+  .footer__header img {
+    height: 39px;
+    width: auto;
+  }
+  .footer__subtitle {
+    line-height: 171%;
+    font-size: 0.875rem;
+    padding-top: 1.625rem;
+    width: 335px;
+  }
+  .footer__address {
+    padding-left: 2.5rem;
+    padding-top: 1.5rem;
+  }
+  .footer__address--child {
+    display: flex;
+    gap: 1.0625rem;
+    align-items: center;
+  }
+  .footer__address--child:last-child {
+    padding-top: 1.25rem;
+    padding-bottom: 4.875rem;
+  }
+  .footer__socials {
+    padding-left: 2.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+  .footer__socials a {
+    text-decoration: none;
   }
 }
