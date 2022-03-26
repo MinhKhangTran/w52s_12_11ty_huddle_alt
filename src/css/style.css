@@ -725,6 +725,12 @@ footer {
 .footer__socials a {
   text-decoration: none;
 }
+.footer__social path {
+  transition: var(--transition);
+}
+.footer__social:hover path {
+  fill: hsl(191, 98%, 48%);
+}
 
 @media (min-width: 1025px) {
   footer {
