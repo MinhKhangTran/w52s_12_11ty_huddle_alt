@@ -357,6 +357,23 @@ button[data-type="primary curved"] {
 button[data-type="primary curved"]:hover {
   background-color: var(--light-pink);
 }
+button[data-type="primary"] {
+  --button-pi: 2.59375rem;
+  --button-pb: 0.625rem;
+  --button-fs: 1rem;
+  background-color: var(--pink);
+  border-radius: 4px;
+  border: none;
+  color: white;
+  padding-top: var(--button-pb);
+  padding-bottom: var(--button-pb);
+  padding-left: var(--button-pi);
+  padding-right: var(--button-pi);
+  font-size: var(--button-fs);
+}
+button[data-type="primary"]:hover {
+  background-color: var(--light-pink);
+}
 @media (min-width: 820px) {
   button[data-type="naked"] {
     --button-pb: 0.5625rem;
@@ -627,9 +644,7 @@ footer {
   width: 100vw;
   transform: translateY(-97.5%);
 }
-.socials a {
-  text-decoration: none;
-}
+
 .footer__wrapper {
   --pi: 1.75rem;
   --pt: 3.3125rem;
@@ -638,7 +653,79 @@ footer {
   padding-right: var(--pi);
   padding-top: var(--pt);
   padding-bottom: var(--pb);
+  display: grid;
+  grid-template-areas:
+    "newsletter"
+    "header"
+    "address"
+    "socials";
 }
+.footer__header {
+  grid-area: header;
+}
+.footer__address {
+  grid-area: address;
+}
+.footer__socials {
+  grid-area: socials;
+}
+.footer__newsletter {
+  grid-area: newsletter;
+}
+.footer__newsletter h2 {
+  font-size: 1.25rem;
+  line-height: 171%;
+}
+.footer__newsletter p {
+  line-height: 171%;
+  font-size: 0.875rem;
+  padding-top: 1rem;
+}
+.footer__newsletter input {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  height: 50px;
+  margin-top: 1.875rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+.footer__button--wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer__header {
+  padding-top: 6.5625rem;
+}
+.footer__header img {
+  height: 32px;
+  width: auto;
+}
+.footer__subtitle {
+  line-height: 171%;
+  font-size: 0.875rem;
+  padding-top: 1rem;
+}
+.footer__address {
+  padding-top: 2.625rem;
+}
+.footer__address--child {
+  display: flex;
+  gap: 1.125rem;
+  align-items: center;
+}
+.footer__address--child:last-child {
+  padding-top: 1.25rem;
+  padding-bottom: 3rem;
+}
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+}
+.footer__socials a {
+  text-decoration: none;
+}
+
 @media (min-width: 820px) {
   footer {
     --mt: 21.125rem;
@@ -651,7 +738,7 @@ footer {
     width: 100vw;
     transform: translateY(-97.5%);
   }
-  .socials a {
+  .footer__socials a {
     text-decoration: none;
   }
   .footer__wrapper {

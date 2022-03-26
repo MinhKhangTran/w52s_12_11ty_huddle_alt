@@ -224,14 +224,16 @@
 </main>
     <footer class="bg-very-dark-cyan">
   <div class="footer__wrapper">
-    <a href="/">
-      <img src="/images/logo_alt.svg" alt="home" />
-    </a>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.</p>
-    <address class="text-white">
-      <div>
+    <div class="footer__header">
+      <a href="/">
+        <img src="/images/logo_alt.svg" alt="home" />
+      </a>
+      <p class="[ footer__subtitle ][ text-white fw-600 ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.</p>
+    </div>
+    <address class="[ footer__address ][ text-white ]">
+      <div class="">
         
-        <p>
+        <p class="footer__address--child">
           <span>
             <img
               src="./images/icon-phone.svg"
@@ -241,7 +243,7 @@
           >Phone: +1-543-123-4567
         </p>
         
-        <p>
+        <p class="footer__address--child">
           <span>
             <img
               src="./images/icon-email.svg"
@@ -253,7 +255,7 @@
         
       </div>
     </address>
-    <div class="[ socials ][ text-white ]">
+    <div class="[ footer__socials ][ text-white ]">
        <a class="footer__social" href="https://www.facebook.com" title="https://www.facebook.com" target="_blank" rel="noopener">
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M29.5312 2.53125H6.46875C5.42446 2.53125 4.42294 2.94609 3.68452 3.68452C2.94609 4.42294 2.53125 5.42446 2.53125 6.46875V29.5312C2.53125 30.5755 2.94609 31.5771 3.68452 32.3155C4.42294 33.0539 5.42446 33.4688 6.46875 33.4688H17.7659V20.5962H15.1914V15.4472H17.7446V13.1203C17.7446 11.0143 18.7478 7.72411 23.1628 7.72411L27.14 7.74007V12.1515H24.2517C23.7821 12.1515 23.1138 12.3854 23.1138 13.3885V15.4476H27.2057L26.736 20.5966H22.9148V33.4688H29.5312C30.0483 33.4688 30.5603 33.3669 31.0381 33.169C31.5158 32.9711 31.9499 32.6811 32.3155 32.3155C32.6811 31.9499 32.9711 31.5158 33.169 31.0381C33.3669 30.5603 33.4688 30.0483 33.4688 29.5312V6.46875C33.4688 5.95167 33.3669 5.43965 33.169 4.96193C32.9711 4.48421 32.6811 4.05015 32.3155 3.68452C31.9499 3.31889 31.5158 3.02885 31.0381 2.83097C30.5603 2.6331 30.0483 2.53125 29.5312 2.53125V2.53125Z" fill="white"/>
@@ -270,12 +272,16 @@
                   </svg>
                 </a> 
     </div>
-    <div class="[ newsletter ][ text-white ]">
-      <p>Newsletter</p>
-      <p>To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address</p>
-      <input type="text" />
-      <button>Subscribe</button>
-    </div>
+    <form class="[ footer__newsletter ][ text-white ]">
+      <h2 class="fw-700">Newsletter</h2>
+      <p class="fw-600">To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address</p>
+      <input required type="text" />
+      <div class="footer__button--wrapper">
+        <button type="submit" data-type="primary">
+          Subscribe
+        </button>
+      </div>
+    </form>
   </div>
   <picture class="footer__bg">
     <source

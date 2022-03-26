@@ -1,13 +1,15 @@
 <footer class="bg-very-dark-cyan">
   <div class="footer__wrapper">
-    <a href="/">
-      <img src="{{footer.logo}}" alt="home" />
-    </a>
-    <p>{{footer.text}}</p>
-    <address class="text-white">
-      <div>
+    <div class="footer__header">
+      <a href="/">
+        <img src="{{footer.logo}}" alt="home" />
+      </a>
+      <p class="[ footer__subtitle ][ text-white fw-600 ]">{{footer.text}}</p>
+    </div>
+    <address class="[ footer__address ][ text-white ]">
+      <div class="">
         {% for item in footer.info %}
-        <p>
+        <p class="footer__address--child">
           <span>
             <img
               src="./images/icon-{{item.icon}}.svg"
@@ -19,16 +21,20 @@
         {% endfor %}
       </div>
     </address>
-    <div class="[ socials ][ text-white ]">
+    <div class="[ footer__socials ][ text-white ]">
       {% for social in footer.socials %} {% ext social.icon, social.url %} {%
       endfor %}
     </div>
-    <div class="[ newsletter ][ text-white ]">
-      <p>{{footer.newsletter.title}}</p>
-      <p>{{footer.newsletter.text}}</p>
-      <input type="text" />
-      <button>{{footer.newsletter.cta}}</button>
-    </div>
+    <form class="[ footer__newsletter ][ text-white ]">
+      <h2 class="fw-700">{{footer.newsletter.title}}</h2>
+      <p class="fw-600">{{footer.newsletter.text}}</p>
+      <input required type="text" />
+      <div class="footer__button--wrapper">
+        <button type="submit" data-type="primary">
+          {{footer.newsletter.cta}}
+        </button>
+      </div>
+    </form>
   </div>
   <picture class="footer__bg">
     <source
